@@ -3,7 +3,8 @@ import React, { useState } from "react";
  * https://reactnative.dev/docs/view
  * https://reactnative.dev/docs/text
  */
-import { Text, View, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native";
+import { Box } from "@/atoms";
 
 export default function MainScreen() {
 
@@ -19,11 +20,7 @@ export default function MainScreen() {
   };
 
   return (
-    <View style = {{
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    }}>
+    <Box flex={1} justifyContent="center" alignItems="center">
       <Text style={styles.baseText}>
         <Text style={styles.titleText} onPress={onPressTitle}>
           {titleText}
@@ -34,7 +31,7 @@ export default function MainScreen() {
           color: 'black',
         }}>{bodyText}</Text>
       </Text>
-    </View>
+    </Box>
   )
 }
 
