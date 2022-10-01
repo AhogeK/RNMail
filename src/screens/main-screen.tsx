@@ -1,50 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 /**
  * https://reactnative.dev/docs/view
  * https://reactnative.dev/docs/text
  */
-import { Text, StyleSheet } from "react-native";
-import { Box } from "@/atoms";
+import { Container } from "@/atoms";
+import NoteList from "@/components/note-list";
 
 export default function MainScreen() {
-
-  const [titleText, setTitleText] = useState("Title Text");
-  const bodyText = "Hello World";
-
-  const onPressTitle = () => {
-    if (titleText == "Title Text") {
-      setTitleText("Title Text [pressed]");
-    } else {
-      setTitleText("Title Text");
-    }
-  };
-
   return (
-    <Box flex={1} justifyContent="center" alignItems="center">
-      <Text style={styles.baseText}>
-        <Text style={styles.titleText} onPress={onPressTitle}>
-          {titleText}
-          {"\n"}
-          {"\n"}
-        </Text>
-        <Text style = {{
-          color: 'black',
-        }}>{bodyText}</Text>
-      </Text>
-    </Box>
-  )
+    <Container justifyContent="center" alignItems="center">
+      <NoteList />
+    </Container>
+  );
 }
-
-const styles = StyleSheet.create({
-  baseText: {
-    fontFamily: "Cochin",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center"
-  },
-  titleText: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "black"
-  }
-});

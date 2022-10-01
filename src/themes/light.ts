@@ -1,5 +1,6 @@
 // https://github.com/Shopify/restyle
 import { createTheme } from "@shopify/restyle";
+import { StatusBarStyle } from "react-native";
 
 // Palette
 const p = {
@@ -39,12 +40,12 @@ const theme = createTheme({
     yellow: p.yellow,
 
     $primary: p.blue70,
-    $windowBackground: '#f0f0f0',
+    $windowBackground: "#f0f0f0",
     $background: p.paper10,
     $foreground: p.paper900,
     $sidebarBackground: p.navy20,
     $sidebarForeground: p.navy900,
-    $sidebarSeparator: p.paper00 + '20'
+    $sidebarSeparator: p.paper00 + "20",
   },
   borderRadii: {
     xs: 4,
@@ -53,15 +54,18 @@ const theme = createTheme({
     lg: 64,
     hg: 128,
   },
+  statusBar: {
+    barStyle: "dark-content" as StatusBarStyle,
+  },
   textVariants: {
     defaults: {
-      color: '$foreground',
+      color: "$foreground",
       fontSize: 16,
     },
     sidebar: {
-      color: '$sidebarForeground'
-    }
-  }
+      color: "$sidebarForeground",
+    },
+  },
 })
 
 export default theme
