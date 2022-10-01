@@ -1,3 +1,3 @@
-import { Theme } from './light'
+import { Theme } from "./light";
 
-export type { Theme }
+export type { Theme };

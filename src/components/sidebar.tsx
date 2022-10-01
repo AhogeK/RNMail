@@ -19,7 +19,7 @@ const Sidebar: React.FC<DrawerContentComponentProps> = ({ navigation }) => {
         </Text>
       </SafeAreaView>
     </Box>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

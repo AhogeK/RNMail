@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 // https://reactnavigation.org/docs/navigation-container/
 import { NavigationContainer } from "@react-navigation/native";
 import Navigations from "@/navigations";
@@ -12,7 +12,7 @@ const App = () => {
         <Navigations />
       </ThemeProvider>
     </NavigationContainer>
-  )
-}
+  );
+};
 
-export default App
+export default App;

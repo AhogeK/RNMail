@@ -6,12 +6,12 @@ export default function SafeAreaViewDemo() {
     <Box flex={1}>
       <Text style={styles.text}>Page content</Text>
     </Box>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   text: {
     fontSize: 25,
-    fontWeight: '500'
-  }
-})
+    fontWeight: "500",
+  },
+});

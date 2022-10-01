@@ -6,7 +6,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import MainScreen from "@/screens/main-screen";
 import Sidebar from "@/components/sidebar";
 // https://reactnavigation.org/docs/typescript/
-import { NavigatorScreenParams } from '@react-navigation/native';
+import { NavigatorScreenParams } from "@react-navigation/native";
 import SafeAreaViewDemo from "@/screens/safe-area-view-demo";
 
 export type HomeDrawerParamList = {
@@ -30,7 +30,7 @@ function Home() {
       drawerType: "back",
       swipeEdgeWidth: 200,
     }}
-      drawerContent={props => <Sidebar {...props} />}
+                      drawerContent={props => <Sidebar {...props} />}
     >
       <Drawer.Screen name="Main" component={MainScreen} options={{
         headerShown: false,
