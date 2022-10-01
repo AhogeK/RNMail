@@ -7,6 +7,7 @@ import MainScreen from "@/screens/main-screen";
 import Sidebar from "@/components/sidebar";
 // https://reactnavigation.org/docs/typescript/
 import { NavigatorScreenParams } from '@react-navigation/native';
+import SafeAreaViewDemo from "@/screens/safe-area-view-demo";
 
 export type HomeDrawerParamList = {
   Main: {}
@@ -14,6 +15,7 @@ export type HomeDrawerParamList = {
 
 export type RootStackParamList = {
   Home: NavigatorScreenParams<HomeDrawerParamList>,
+  SafeAreaViewDemo: NavigatorScreenParams<HomeDrawerParamList>
   Detail: {
     noteId: string
   }
@@ -43,6 +45,7 @@ export default function Navigations() {
       <Stack.Screen name="Home" component={Home} options={{
         headerShown: false,
       }} />
+      <Stack.Screen name="SafeAreaViewDemo" component={SafeAreaViewDemo} />
     </Stack.Navigator>
   );
 }
