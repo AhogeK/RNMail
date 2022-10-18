@@ -8,6 +8,7 @@ import Sidebar from "@/components/sidebar";
 // https://reactnavigation.org/docs/typescript/
 import { NavigatorScreenParams } from "@react-navigation/native";
 import SafeAreaViewDemo from "@/screens/safe-area-view-demo";
+import ShopifyRestyleLearning from "@/screens/shopify-restyle-learning";
 
 export type HomeDrawerParamList = {
   Main: {}
@@ -16,6 +17,7 @@ export type HomeDrawerParamList = {
 export type RootStackParamList = {
   Home: NavigatorScreenParams<HomeDrawerParamList>,
   SafeAreaViewDemo: NavigatorScreenParams<HomeDrawerParamList>
+  ShopifyRestyleLearning: NavigatorScreenParams<HomeDrawerParamList>
   Detail: {
     noteId: string
   }
@@ -26,12 +28,9 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 
 function Home() {
   return (
-    <Drawer.Navigator initialRouteName="Main" screenOptions={{
-      drawerType: "back",
-      swipeEdgeWidth: 200,
-    }}
-                      drawerContent={props => <Sidebar {...props} />}
-    >
+    <Drawer.Navigator initialRouteName="Main"
+                      screenOptions={{ drawerType: "back", swipeEdgeWidth: 200 }}
+                      drawerContent={props => <Sidebar {...props} />}>
       <Drawer.Screen name="Main" component={MainScreen} options={{
         headerShown: false,
       }} />
@@ -46,6 +45,7 @@ export default function Navigations() {
         headerShown: false,
       }} />
       <Stack.Screen name="SafeAreaViewDemo" component={SafeAreaViewDemo} />
+      <Stack.Screen name={"ShopifyRestyleLearning"} component={ShopifyRestyleLearning} />
     </Stack.Navigator>
   );
 }

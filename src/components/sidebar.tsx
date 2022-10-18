@@ -14,8 +14,15 @@ const Sidebar: React.FC<DrawerContentComponentProps> = ({ navigation }) => {
   return (
     <Box flex={1} bg="$sidebarBackground">
       <SafeAreaView>
-        <Text variant="sidebar" m="lg" onPress={() => navigation.navigate("SafeAreaViewDemo")}>
-          Sidebar
+        <Text variant="sidebar" m="lg" onPress={
+          () => navigation.navigate("SafeAreaViewDemo")
+        }>
+          Safe Area View Demo
+        </Text>
+        <Text variant={"sidebar"} m={"lg"} onPress={
+          () => navigation.navigate("ShopifyRestyleLearning")
+        }>
+          Shopify Restyle Learning
         </Text>
       </SafeAreaView>
     </Box>
