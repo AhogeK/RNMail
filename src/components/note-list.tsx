@@ -1,15 +1,15 @@
-import { Note } from "@/models";
+import React, { useCallback } from "react";
 import { Theme } from "@/themes";
 import { createBox } from "@shopify/restyle";
-import React, { useCallback } from "react";
-import Notes from "@/fixtures/notes";
-import NoteListItem from "@/components/note-list-item";
-import { Animated, FlatListProps, ListRenderItem, NativeScrollEvent, NativeSyntheticEvent } from "react-native";
+import { FlatListProps, ListRenderItem, NativeScrollEvent, NativeSyntheticEvent } from "react-native";
+import NoteListItem from "./note-list-item";
+import { Note } from "@/models";
+import Animated, { AnimateProps } from "react-native-reanimated";
 import { Box } from "@/atoms";
-import AnimatedProps = Animated.AnimatedProps;
+import Notes from "@/fixtures/notes";
 
 const StyledFlatList = createBox<Theme,
-  AnimatedProps<FlatListProps<Note>>>(Animated.FlatList);
+  AnimateProps<FlatListProps<Note>>>(Animated.FlatList);
 
 interface Props {
   contentInsetTop: number;
