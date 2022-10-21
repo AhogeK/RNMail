@@ -19,11 +19,6 @@ const Sidebar: React.FC<DrawerContentComponentProps> = ({ navigation }) => {
         }>
           Safe Area View Demo
         </Text>
-        <Text variant={"sidebar"} m={"lg"} onPress={
-          () => navigation.navigate("ShopifyRestyleLearning")
-        }>
-          Shopify Restyle Learning
-        </Text>
       </SafeAreaView>
     </Box>
   );
