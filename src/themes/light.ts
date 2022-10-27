@@ -8,6 +8,7 @@ const p = {
   red: "red",
   blue: "blue",
   yellow: "yellow",
+  white: "white",
   paper00: "#ffffff",
   paper10: "#f5f5f4",
   paper20: "#e6e6e6",
@@ -16,6 +17,7 @@ const p = {
   blue70: "#2185d0",
   navy20: "#171a21",
   navy900: "#b9babc",
+
 };
 
 const theme = createTheme({
@@ -39,6 +41,7 @@ const theme = createTheme({
     red: p.red,
     blue: p.blue,
     yellow: p.yellow,
+    white: p.white,
 
     $primary: p.blue70,
     $windowBackground: "#f0f0f0",
